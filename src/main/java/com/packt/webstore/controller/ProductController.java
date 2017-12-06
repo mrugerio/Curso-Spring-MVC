@@ -26,7 +26,7 @@ public class ProductController {
 	@RequestMapping("/update/stock")
 	public String updateStock(Model model) {
 	   productService.updateAllStock();
-	   return "redirect:/products";
+	   return "redirect:/market/products";
 	}
 
 }
