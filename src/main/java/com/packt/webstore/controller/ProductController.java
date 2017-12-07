@@ -125,4 +125,8 @@ public class ProductController {
 	    return mav;
 	}
 	
+	@RequestMapping("/products/invalidPromoCode")
+	public String invalidPromoCode() {
+	      return "invalidPromoCode";
+	}
 }
