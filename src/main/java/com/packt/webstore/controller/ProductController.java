@@ -39,7 +39,7 @@ public class ProductController {
 	private ProductService productService;
 	
 	@Autowired
-	private UnitsInStockValidator unitsInStockValidator;
+	private ProductValidator productValidator;
 
 	@RequestMapping("/products")
 	public String list(Model model) {
@@ -114,7 +114,7 @@ public class ProductController {
 	
 	@InitBinder
 	public void initialiseBinder(WebDataBinder binder) {
-		binder.setValidator(unitsInStockValidator);		
+		binder.setValidator(productValidator);
 		binder.setAllowedFields("productId",
 	            "name",
 	            "unitPrice",
